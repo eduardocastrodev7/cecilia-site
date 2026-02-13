@@ -1,0 +1,150 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.errorContainer {
+  border-radius: 0.375rem;
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 1rem;
+}
+
+.errorText {
+  font-size: 0.875rem;
+  color: #991b1b;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+
+.labelOptional {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.input {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.875rem;
+  padding: 0.5rem 0.75rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.helpText {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.actionsLeft {
+  display: flex;
+}
+
+.actionsRight {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.buttonPrimary {
+  color: white;
+  background-color: #2563eb;
+}
+
+.buttonPrimary:hover {
+  background-color: #1d4ed8;
+}
+
+.buttonPrimary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.buttonPrimary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonSecondary {
+  color: #374151;
+  background-color: white;
+  border-color: #d1d5db;
+}
+
+.buttonSecondary:hover {
+  background-color: #f9fafb;
+}
+
+.buttonSecondary:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+}
+
+.buttonDanger {
+  color: white;
+  background-color: #dc2626;
+}
+
+.buttonDanger:hover {
+  background-color: #b91c1c;
+}
+
+.buttonDanger:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.5);
+}
+
+@media (min-width: 640px) {
+  .input {
+    font-size: 0.875rem;
+  }
+}
+

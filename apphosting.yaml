@@ -1,0 +1,32 @@
+# Settings for Backend (on Cloud Run).
+# See https://firebase.google.com/docs/app-hosting/configure#cloud-run
+runConfig:
+  minInstances: 0
+  # maxInstances: 100
+  # concurrency: 80
+  # cpu: 1
+  # memoryMiB: 512
+
+# Environment variables and secrets.
+# See https://firebase.google.com/docs/app-hosting/configure
+env:
+  - variable: NEXTAUTH_URL
+    value: https://cecilia.digital
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: GCS_BUCKET_NAME
+    value: ceciliablog
+    availability:
+      - BUILD
+      - RUNTIME
+
+  - variable: MONGODB_URI
+    secret: mongo_db_cecilia_digital_blog
+  - variable: NEXTAUTH_SECRET
+    secret: NEXTAUTH_SECRET_CECILIA_DIGITAL_BLOG
+  - variable: EMAIL_ADMIN
+    secret: email_admin
+  - variable: PASSWORD_ADMIN
+    secret: password_admin
